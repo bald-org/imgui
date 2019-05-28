@@ -1,15 +1,12 @@
 cmake_minimum_required(VERSION 3.14)
-project(bald)
 
-set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
-set(CMAKE_DISABLE_SOURCE_CHANGES  ON)
+project(imgui)
 
-if ("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
-    message(SEND_ERROR "In-source builds are not allowed.")
-endif ()
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
-if (WIN32)
-    set(CMAKE_SHARED_LIBRARY_PREFIX "")
-endif ()
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
+add_library(imgui imgui_widgets.cpp imgui_draw.cpp imgui_demo.cpp imgui.cpp)
 
