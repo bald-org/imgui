@@ -100,7 +100,8 @@
 #elif defined(IMGUI_IMPL_OPENGL_LOADER_GLEW)
 #include <GL/glew.h>    // Needs to be initialized with glewInit() in user's code
 #elif defined(IMGUI_IMPL_OPENGL_LOADER_GLAD)
-#include <glad/glad.h>  // Needs to be initialized with gladLoadGL() in user's code
+//#include <glad/glad.h>  // Needs to be initialized with gladLoadGL() in user's code
+#include "../../../vendor/glad/include/glad/glad.h"
 #else
 #include IMGUI_IMPL_OPENGL_LOADER_CUSTOM
 #endif

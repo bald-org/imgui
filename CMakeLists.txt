@@ -10,11 +10,15 @@ set(RELEASE_COMPILE_FLAGS -Ofast -Werror)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
+add_definitions(-DIMGUI_IMPL_OPENGL_LOADER_GLAD)
+
 add_library(imgui
         ${CMAKE_CURRENT_SOURCE_DIR}/imgui_widgets.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/imgui_draw.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/imgui_demo.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/imgui.cpp)
+        ${CMAKE_CURRENT_SOURCE_DIR}/imgui.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/examples/imgui_impl_opengl3.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/examples/imgui_impl_glfw.cpp)
 
 if(DEFINE_DEBUG)
     target_compile_options(imgui PUBLIC ${DEBUG_COMPILE_FLAGS})
