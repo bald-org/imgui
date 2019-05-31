@@ -5,7 +5,7 @@ project(imgui)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(DEBUG_COMPILE_FLAGS -fsanitize=leak -pedantic -Wall -Wnon-virtual-dtor -Werror -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wnull-dereference -Wduplicated-cond -Wduplicated-branches -Wlogical-op -g)
+set(DEBUG_COMPILE_FLAGS -fsanitize=leak -pedantic -Wall -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wnull-dereference -Wduplicated-cond -Wduplicated-branches -Wlogical-op -g)
 set(RELEASE_COMPILE_FLAGS -Ofast -Werror)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
