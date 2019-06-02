@@ -9,6 +9,8 @@ set(DEBUG_COMPILE_FLAGS -fsanitize=leak -pedantic -Wall -Wnon-virtual-dtor -Wcas
 set(RELEASE_COMPILE_FLAGS -Ofast -Werror)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../glfw/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../glad/include)
 
 add_definitions(-DIMGUI_IMPL_OPENGL_LOADER_GLAD)
 
